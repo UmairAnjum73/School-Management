@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(method='POST' action='/users')
+          div.form-group
+            label(for='name') Name:
+            br
+            input#name.form-control(type='text', placeholder='first and last name' name='name')
+          div.form-group
+            label(for='email') Email:
+            br
+            input#email.form-control(type='email', placeholder='name@email.com' name='email')
+          div.form-group
+            label(for='image') Image url:
+            br
+            input#image.form-control(type='text', placeholder='title of book' name='favoriteBook')
+          div.form-group
+            label(for='rollNo') Roll no:
+            br
+            input#rollNo.form-control(type='text' name='rollNo' placeholder = '12345')
+          div.form-group
+            label(for='contactNo') Contact No:
+            br
+            input#contactNo.form-control(type='text' name='contactNo' placeholder='03314088500')
+          div.form-group
+            label(for='address') Address:
+            br
+            input#address.form-control(type='text' name='address' placeholder='G-11')
+          div.form-group
+            label(for='department') Department:
+            br
+            input#department.form-control(type='text' name='address' placeholder='Computer Science')
+          button.btn.btn-primary(type='submit' id ='addStudentBtn' action='/users') Add Student
+          
+          button.btn.btn-primary(type='submit' id = 'viewStudentsBtn' action='/users') View Students
