@@ -60,7 +60,7 @@ app.use(function(err, req, res, next) {
 function checkTokens (req,res,next){
 
   //get Token from request
-  let token = req.headers.authorization.split(' ')[1];
+  let token = req.headers.authorization;
   console.log("Token is " + token);
   // if there token is empty or null 
   if (!token){
